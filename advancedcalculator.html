@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            --btnsize : 50px;
+            --btnfontsize :20px;
+            --outputsize: 40px;
+        }
+        
+        body{
+            background: linear-gradient(45deg,rgb(110, 110, 255),hsl(196, 100%, 64%));
+            height: 100vh;
+            display: flex;
+            font-family: Arial, Helvetica, sans-serif;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container{
+            padding: 10px;
+            background-color: #101010;
+            border-radius: 10px;
+        }
+
+        .btn{
+            height: var(--btnsize);
+            width: var(--btnsize);
+            border-radius: 50%;
+            border: none;
+            margin: 3px;
+            background-color: #404040;
+            color: white;
+            font-size: var(--btnfontsize);
+            font-weight: 500;
+        }
+        .btn:hover{
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+
+        .color-orange{
+            background-color: orange;
+        }
+        
+        .color-grey{
+            background-color: #999999;
+            color: black;
+        }
+
+        .zerobtn{
+            width: 110px !important;
+            border-radius: 100px !important;
+        }
+
+        #output{
+            height: 100px;
+            width: 234px;
+            display: flex;
+            align-items: end;
+            justify-content: right;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 100 !important;
+            font-size: var(--outputsize);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="output">0</div>
+        <div class="row">
+            <button class="btn color-grey">AC</button>
+            <button class="btn color-grey">&plusmn;</button>
+            <button class="btn color-grey">%</button>
+            <button class="btn color-orange">/</button>
+        </div>
+        <div class="row">
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+            <button class="btn color-orange">*</button>
+        </div>
+        <div class="row">
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn color-orange">-</button>
+        </div>
+        <div class="row">
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn color-orange">+</button>
+        </div>
+        <div class="row">
+            <button class="btn zerobtn">0</button>
+            <button class="btn">.</button>
+            <button class="btn color-orange">&equals;</button>
+        </div>
+    </div>
+</body>
+<script>
+    let string = ""
+    let btns = document.querySelectorAll('.btn')
+    let output = document.getElementById("output")
+
+    Array.from(btns).forEach((btn)=>{
+        btn.addEventListener('click',(e)=>{
+            if(e.target.innerHTML == "=")
+            {
+                string = eval(string)
+            }
+            else if(e.target.innerHTML == "AC")
+            {
+                string = "";
+            }
+            else{
+                console.log(e.target)
+                string = string + e.target.innerHTML
+            }
+            output.innerHTML = string
+        })
+    })
+</script>
+</html>
