@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agents</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: rgb(45, 45, 45);
+            color: white;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .MainFrame {
+            border: 2px solid rgba(255, 255, 255, 0);
+            margin: 200px 400px;
+        }
+
+        .Logo img {
+            width: 100px;
+            display: block;
+        }
+
+        .Body select {
+            display: block;
+            align-items: stretch;
+            background-color: rgba(255, 255, 255, 0);
+            float: right;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 4px;
+            color: white;
+        }
+
+        .Body option {
+            background-color: rgba(255, 255, 255, 0);
+            color: black;
+        }
+
+        .text{
+            display: block;
+            font-size: 22px;
+            letter-spacing: 1px;
+            line-height: 33px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: lighter;
+            text-align: justify;
+
+            margin: 75px 0px;
+            padding-top: 25px;
+        }
+
+        em {
+            font-weight: bold;
+        }
+
+        .Body button {
+            float: right;
+            font-size: 16px;
+            padding: 10px 20px;
+
+            background-color: rgba(255, 255, 255, 0);
+            color: white;
+            border: 1px solid white;
+            border-radius: 3px;
+        }
+
+        .Body button:hover {
+            background-color: rgba(255, 255, 255, 0.062);
+        }
+
+        .AgentSelector div{
+            display: inline-block;
+        }
+
+        .AgentSelector div:hover{
+            background-color: rgba(255, 255, 255, 0.11);
+        }
+
+        .AgentSelector div:active{
+            background-color: rgba(255, 255, 255, 0.178);
+        }
+
+        .AgentSelector img{
+            height: 250px;
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="MainFrame">
+
+        <!-- Valorant Logo -->
+
+        <div class="Logo" style="font-family: 'Source Code Pro', monospace; font-size: 40px; color: #ff4655;">
+            <img src="Images/Valorant Logo.png" alt="Error Loading Image">
+            VALORANT
+        </div>
+
+        <!-- Body -->
+
+        <div class="Body">
+
+            <!-- language selector -->
+
+            <form action="backend.php">
+                <select>
+                    <option value="Language">English</option>
+                    <option value="Language">Tamil</option>
+                    <option value="Language">Hindi</option>
+                    <option value="Language">Kannada</option>
+                    <option value="Language">Telugu</option>
+                    <option value="Language">Marathi</option>
+                </select>
+            </form>
+
+            <!-- Heading -->
+
+            <div class="text">
+                <p>
+                    This section contains questions about VALORANT agent balance.
+                </p>
+            </div>
+
+            <!-- Strongest agents -->
+
+            <div class="Strong">
+                
+                <!-- content -->
+                
+                <p class="text">
+                    Are there any agents in VALORANT that feel <em>TOO POWERFUL</em> compared to the rest of the roster?
+                    If so, please <em>select</em> those agents below.
+                    
+                </p>
+
+                <!-- Agent Selections -->
+                            
+            </div>
+            
+            <form action="backend.php" class="AgentSelector">
+                <div>
+                    <label for="sova">
+                        <img src="Images/Valo agents/Sova_icon.webp" alt="Error">
+                        <input type="checkbox" id="sova">
+                    </label>
+                </div>
+                
+                <div>
+                    <label for="viper">
+                        <img src="Images/Valo agents/Viper_icon.webp" alt="Error">
+                        <input type="checkbox" id="viper">
+                    </label>
+                </div>
+                
+                <div>
+                    <label for="jett">
+                        <img src="Images/Valo agents/Jett_icon.webp" alt="Error">
+                        <input type="checkbox" id="jett">
+                    </label>
+                </div>
+                
+                <div>
+                    <label for="cypher">
+                        <img src="Images/Valo agents/Cypher_icon.webp" alt="Error">
+                        <input type="checkbox" id="cypher">
+                    </label>
+                </div>
+                <div>
+                    <label for="breach">
+                        <img src="Images/Valo agents/Breach_icon.webp" alt="Error">
+                        <input type="checkbox" id="breach">
+                    </label>
+                </div>
+                <div>
+                    <label for="killjoy">
+                        <img src="Images/Valo agents/killjoy.png" alt="Error">
+                        <input type="checkbox" id="killjoy">
+                    </label>
+                </div>
+                
+                <div>
+                    <label for="pheonix">
+                        <img src="Images/Valo agents/Phoenix_icon.webp" alt="Error">
+                        <input type="checkbox" id="pheonix">
+                    </label>
+                </div>
+
+                <div>
+                    <label for="brimstone">
+                        <img src="Images/Valo agents/Brimstone_icon.webp" alt="Error">
+                        <input type="checkbox" id="brimstone">
+                    </label>
+                </div>
+
+                <div>
+                    <label for="sage">
+                        <img src="Images/Valo agents/Sage_icon.webp" alt="Error">
+                        <input type="checkbox" id="sage">
+                    </label>
+                </div>
+                
+                <div>
+                    <label for="raze">
+                        <img src="Images/Valo agents/Raze_icon.webp" alt="Error">
+                        <input type="checkbox" id="raze">
+                    </label>
+                </div>
+                
+                <div>
+                    <label for="chamber">
+                        <img src="Images/Valo agents/chamber.png" alt="Error">
+                        <input type="checkbox" id="chamber">
+                    </label>
+                </div>
+                
+                <div>
+                    <label for="yoru">
+                        <img src="Images/Valo agents/Yoru_icon.webp" alt="Error">
+                        <input type="checkbox" id="yoru">
+                    </label>
+                </div>
+                
+                <div>
+                    <label for="skye">
+                        <img src="Images/Valo agents/Skye_icon.webp" alt="Error">
+                        <input type="checkbox" id="skye">
+                    </label>
+                </div>
+                
+            </form>
+            
+            <div class="Confusing">
+                
+                <!-- content -->
+                
+                <p class="text">
+                    Are there any agents in VALORANT that feel <em>TOO FRUSTRATING OR CONFUSING</em> to play against compared to the rest of the roster?
+                    If so, please <em>select</em> those agents below.
+                    
+                </p>
+
+                <!-- Agent Selections -->
+                            
+            </div>
+            
+            <form action="backend.php" class="AgentSelector">
+                <div>
+                    <label for="sova1fa2">
+                        <img src="Images/Valo agents/Sova_icon.webp" alt="Error">
+                        <input type="checkbox" id="sova1fa2">
+                    </label>
+                </div>
+                
+                <div>
+                    <label for="viper1fa2">
+                        <img src="Images/Valo agents/Viper_icon.webp" alt="Error">
+                        <input type="checkbox" id="viper1fa2">
+                    </label>
+                </div>
+                
+                <div>
+                    <label for="jett1fa2">
+                        <img src="Images/Valo agents/Jett_icon.webp" alt="Error">
+                        <input type="checkbox" id="jett1fa2">
+                    </label>
+                </div>
+                
+                <div>
+                    <label for="cypher1fa2">
+                        <img src="Images/Valo agents/Cypher_icon.webp" alt="Error">
+                        <input type="checkbox" id="cypher1fa2">
+                    </label>
+                </div>
+                <div>
+                    <label for="breach1fa2">
+                        <img src="Images/Valo agents/Breach_icon.webp" alt="Error">
+                        <input type="checkbox" id="breach1fa2">
+                    </label>
+                </div>
+                <div>
+                    <label for="killjoy1fa2">
+                        <img src="Images/Valo agents/killjoy.png" alt="Error">
+                        <input type="checkbox" id="killjoy1fa2">
+                    </label>
+                </div>
+                
+                <div>
+                    <label for="pheonix1fa2">
+                        <img src="Images/Valo agents/Phoenix_icon.webp" alt="Error">
+                        <input type="checkbox" id="pheonix1fa2">
+                    </label>
+                </div>
+
+                <div>
+                    <label for="brimstone1fa2">
+                        <img src="Images/Valo agents/Brimstone_icon.webp" alt="Error">
+                        <input type="checkbox" id="brimstone1fa2">
+                    </label>
+                </div>
+
+                <div>
+                    <label for="sage1fa2">
+                        <img src="Images/Valo agents/Sage_icon.webp" alt="Error">
+                        <input type="checkbox" id="sage1fa2">
+                    </label>
+                </div>
+                
+                <div>
+                    <label for="raze1f2a">
+                        <img src="Images/Valo agents/Raze_icon.webp" alt="Error">
+                        <input type="checkbox" id="raze1fa2">
+                    </label>
+                </div>
+                
+                <div>
+                    <label for="chamber1fa2">
+                        <img src="Images/Valo agents/chamber.png" alt="Error">
+                        <input type="checkbox" id="chamber1fa2">
+                    </label>
+                </div>
+                
+                <div>
+                    <label for="yoru1fa2">
+                        <img src="Images/Valo agents/Yoru_icon.webp" alt="Error">
+                        <input type="checkbox" id="yoru1fa2">
+                    </label>
+                </div>
+                
+                <div>
+                    <label for="skye1fa2">
+                        <img src="Images/Valo agents/Skye_icon.webp" alt="Error">
+                        <input type="checkbox" id="skye1fa2">
+                    </label>
+                </div>
+                
+            </form>
+            
+            <div class="Weak">
+                
+                <!-- content -->
+                
+                <p class="text">
+                    Are there any agents in VALORANT that feel <em>TOO WEAK</em> compared to the rest of the roster?
+                    If so, please <em>select</em> those agents below.
+                    
+                </p>
+
+                <!-- Agent Selections -->
+                            
+            </div>
+            
+            <form action="backend.php" class="AgentSelector">
+                <div>
+                    <label for="sova1fa">
+                        <img src="Images/Valo agents/Sova_icon.webp" alt="Error">
+                        <input type="checkbox" id="sova1fa">
+                    </label>
+                </div>
+                
+                <div>
+                    <label for="viper1fa">
+                        <img src="Images/Valo agents/Viper_icon.webp" alt="Error">
+                        <input type="checkbox" id="viper1fa">
+                    </label>
+                </div>
+                
+                <div>
+                    <label for="jett1fa">
+                        <img src="Images/Valo agents/Jett_icon.webp" alt="Error">
+                        <input type="checkbox" id="jett1fa">
+                    </label>
+                </div>
+                
+                <div>
+                    <label for="cypher1fa">
+                        <img src="Images/Valo agents/Cypher_icon.webp" alt="Error">
+                        <input type="checkbox" id="cypher1fa">
+                    </label>
+                </div>
+                <div>
+                    <label for="breach1fa">
+                        <img src="Images/Valo agents/Breach_icon.webp" alt="Error">
+                        <input type="checkbox" id="breach1fa">
+                    </label>
+                </div>
+                <div>
+                    <label for="killjoy1fa">
+                        <img src="Images/Valo agents/killjoy.png" alt="Error">
+                        <input type="checkbox" id="killjoy1fa">
+                    </label>
+                </div>
+                
+                <div>
+                    <label for="pheonix1fa">
+                        <img src="Images/Valo agents/Phoenix_icon.webp" alt="Error">
+                        <input type="checkbox" id="pheonix1fa">
+                    </label>
+                </div>
+
+                <div>
+                    <label for="brimstone1fa">
+                        <img src="Images/Valo agents/Brimstone_icon.webp" alt="Error">
+                        <input type="checkbox" id="brimstone1fa">
+                    </label>
+                </div>
+
+                <div>
+                    <label for="sage1fa">
+                        <img src="Images/Valo agents/Sage_icon.webp" alt="Error">
+                        <input type="checkbox" id="sage1fa">
+                    </label>
+                </div>
+                
+                <div>
+                    <label for="raze1fa">
+                        <img src="Images/Valo agents/Raze_icon.webp" alt="Error">
+                        <input type="checkbox" id="raze1fa">
+                    </label>
+                </div>
+                
+                <div>
+                    <label for="chamber1fa">
+                        <img src="Images/Valo agents/chamber.png" alt="Error">
+                        <input type="checkbox" id="chamber1fa">
+                    </label>
+                </div>
+                
+                <div>
+                    <label for="yoru1fa">
+                        <img src="Images/Valo agents/Yoru_icon.webp" alt="Error">
+                        <input type="checkbox" id="yoru1fa">
+                    </label>
+                </div>
+                
+                <div>
+                    <label for="skye1fa">
+                        <img src="Images/Valo agents/Skye_icon.webp" alt="Error">
+                        <input type="checkbox" id="skye1fa">
+                    </label>
+                </div>
+                
+            </form>
+            
+            <a href="PostCredits.html"><button>Submit</button></a>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
