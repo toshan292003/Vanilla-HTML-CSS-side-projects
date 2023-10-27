@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(-45deg, rgb(255, 143, 92), rgb(255, 97, 123));
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+
+            --card1color: rgb(236, 36, 22);
+            --card2color: rgb(199, 48, 204);
+            --card2shadow: rgb(185, 32, 190);
+            --card3color: rgb(241, 175, 75);
+        }
+
+        .card {
+            background-color: white;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.144);
+            height: 650px;
+            width: 420px;
+            margin: 0px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            padding-top: 40px;
+        }
+
+        #card1 h2,
+        #card1 .info {
+            color: var(--card1color);
+        }
+
+        #card1 button {
+            background-color: var(--card1color);
+        }
+
+        #card1 button:hover {
+            border: 3px solid var(--card1color);
+            color: var(--card1color)
+        }
+
+        #card2 h2,
+        #card2 .info {
+            color: var(--card2color);
+        }
+
+        #card2 button {
+            background-color: var(--card2color);
+        }
+
+        #card2 button:hover {
+            border: 3px solid var(--card2color);
+            color: var(--card2color)card--card2color
+        }
+
+        #card2 {
+            height: 700px;
+        }
+
+        #card2 .heading {
+            margin: 40px 0px;
+        }
+
+        #card3 h2,
+        #card3 .info {
+            color: var(--card3color);
+        }
+
+        #card3 button {
+            background-color: var(--card3color);
+        }
+
+        #card3 button:hover {
+            border: 3px solid var(--card3color);
+            color: var(--card3color)
+        }
+
+        .something {
+            margin-top: 5px;
+        }
+
+        .card h2 {
+            margin: 0px;
+        }
+
+        .card h1 {
+            display: inline;
+            font-size: 50px;
+            font-weight: 600;
+        }
+
+        .card sup {
+            display: inline;
+            font-size: 20px;
+            font-weight: 300;
+            position: relative;
+            top: -20px;
+        }
+
+        .card .info {
+            margin: 15px 0px;
+        }
+
+        .card button {
+            border-radius: 50px;
+            color: white;
+            padding: 10px 50px;
+            font-weight: 600;
+            font-size: 20px;
+            transition: all .5s ease;
+            margin: 7px 0px;
+            border: 3px solid transparent;
+        }
+
+        .card button:hover {
+            background-color: white !important;
+            cursor: pointer;
+        }
+
+        .greytext {
+            color: grey;
+            font-weight: 500;
+        }
+
+        .benefits {
+            display: flex;
+            flex-direction: row;
+            width: 80%;
+            justify-content: space-between;
+            margin: 10px 0px;
+        }
+
+        .benefits h4,
+        .benefits h3 {
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0;
+            color: rgb(87, 87, 87);
+        }
+
+        .benefits h3 {
+            font-weight: 800;
+        }
+
+        .tick {
+            color: rgb(2, 199, 2) !important;
+        }
+
+        .cross {
+            color: rgb(255, 38, 38) !important;
+            font-weight: 700 !important;
+        }
+
+        .heading {
+            font-size: 30px;
+            font-weight: 700;
+            margin: 15px 0px;
+        }
+
+        .heading:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        #card2 {
+            margin: 0;
+        }
+
+        .clipbox {
+            padding: 10px 10px;
+            margin: 0px 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .floating {
+            position: absolute;
+            color: white;
+            background-color: var(--card2color);
+            top: 35px;
+            left: -98px;
+            padding: 11px;
+            width: 287px;
+            text-align: center;
+            rotate: -45deg;
+        }
+
+        #shape1,
+        #shape2{
+            height: 30px;
+            width: 50px;
+            background-color: var(--card2shadow);
+            position: absolute;
+            z-index: -1;
+        }
+        #shape1{
+            left: 96px;
+            top: -4px;
+        }
+        #shape2{
+            left: -10px;
+            top: 118px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card" id="card1">
+        <h2>Single</h2>
+        <h2>Web Hosting</h2>
+        <p class="something">Ideal solution for Beginners</p>
+        <div class="info">
+            <sup>&#8377;</sup>
+            <h1>29</h1>
+            <span>/mo</span>
+        </div>
+        <button>Add to Cart</button>
+
+        <p class="greytext">&#8377;159/mo when you renew</p>
+
+        <div class="benefits">
+            <h4>1 Website</h4>
+            <h3 class="tick">&#x2713;</h3>
+        </div>
+        <div class="benefits">
+            <h4>~10000 Visits Monthly</h4>
+            <h3 class="tick">&#x2713;</h3>
+        </div>
+        <div class="benefits">
+            <h4>30 GB SSD Storage</h4>
+            <h3 class="cross">X</h3>
+        </div>
+        <div class="benefits">
+            <h4>100 GB Bandwidth</h4>
+            <h3 class="cross">X</h3>
+        </div>
+
+        <span class="heading">&gt; See all features</span>
+    </div>
+
+    <div class="clipbox">
+        <div class="card" id="card2">
+            <h2>Pemium</h2>
+            <h2>Web Hosting</h2>
+            <p class="something">Perfect Package for personal</p>
+            <div class="info">
+                <sup>&#8377;</sup>
+                <h1>59</h1>
+                <span>/mo</span>
+            </div>
+            <button>Add to Cart</button>
+
+            <p class="greytext">&#8377;159/mo when you renew</p>
+
+            <div class="benefits">
+                <h4>50 Websites</h4>
+                <h3 class="tick">&#x2713;</h3>
+            </div>
+            <div class="benefits">
+                <h4>~25000 Visits Monthly</h4>
+                <h3 class="tick">&#x2713;</h3>
+            </div>
+            <div class="benefits">
+                <h4>60 GB SSD Storage</h4>
+                <h3 class="tick">&#x2713;</h3>
+            </div>
+            <div class="benefits">
+                <h4>200 GB Bandwidth</h4>
+                <h3 class="cross">X</h3>
+            </div>
+
+            <span class="heading">&gt; See all features</span>
+        </div>
+        <div class="floating">BEST VALUE</div>
+        <div id="shape1"></div>
+        <div id="shape2"></div>
+    </div>
+
+    <div class="card" id="card3">
+        <h2>Ultimate</h2>
+        <h2>Web Hosting</h2>
+        <p class="something">Perfect Package for businesses</p>
+        <div class="info">
+            <sup>&#8377;</sup>
+            <h1>99</h1>
+            <span>/mo</span>
+        </div>
+        <button>Add to Cart</button>
+
+        <p class="greytext">&#8377;159/mo when you renew</p>
+
+        <div class="benefits">
+            <h4>100 Websites</h4>
+            <h3 class="tick">&#x2713;</h3>
+        </div>
+        <div class="benefits">
+            <h4>~75000 Visits Monthly</h4>
+            <h3 class="tick">&#x2713;</h3>
+        </div>
+        <div class="benefits">
+            <h4>200 GB SSD Storage</h4>
+            <h3 class="tick">&#x2713;</h3>
+        </div>
+        <div class="benefits">
+            <h4>500 GB Bandwidth</h4>
+            <h3 class="ti">&#x2713;</h3>
+        </div>
+
+        <span class="heading">&gt; See all features</span>
+    </div>
+</body>
+
+</html>
